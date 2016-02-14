@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"os"
 	"strconv"
+	"strings"
 )
 
 func getInput(day int) string {
@@ -12,5 +13,5 @@ func getInput(day int) string {
 		fmt.Println(err)
 		os.Exit(1)
 	}
-	return string(data[:])
+	return strings.TrimSpace(string(data[:]))
 }
