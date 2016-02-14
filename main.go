@@ -1,13 +1,12 @@
 package main
 
 import (
-	"github.com/jokeyrhyme/adventofcode/days/day1a"
-	"github.com/jokeyrhyme/adventofcode/days/day1b"
-	"github.com/jokeyrhyme/adventofcode/days/day2a"
+	"github.com/jokeyrhyme/adventofcode/days/day1"
+	"github.com/jokeyrhyme/adventofcode/days/day2"
 )
 
 func main() {
-	day1a.Go(getInput(1))
-	day1b.Go(getInput(1))
-	day2a.Go(getInput(2))
+	day1.GoA(getInput(1))
+	day1.GoB(getInput(1))
+	day2.GoA(getInput(2))
 }

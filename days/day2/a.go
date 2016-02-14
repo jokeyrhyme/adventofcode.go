@@ -1,7 +1,7 @@
 // http://divan.github.io/posts/go_concurrency_visualize/
 // https://blog.golang.org/pipelines
 
-package day2a
+package day2
 
 import (
 	"fmt"
@@ -75,8 +75,8 @@ func totalWrappingPaper(done <-chan struct{}, presents []string) <-chan int {
 	return c
 }
 
-// Go : main entry point
-func Go(input string) {
+// GoA : main entry point
+func GoA(input string) {
 	fmt.Println("day 2a")
 
 	done := make(chan struct{})

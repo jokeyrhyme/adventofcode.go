@@ -1,12 +1,12 @@
-package day1b
+package day1
 
 import (
 	"fmt"
 	"strings"
 )
 
-// Go : main entry point
-func Go(input string) {
+// GoB : main entry point
+func GoB(input string) {
 	fmt.Println("day 1b")
 
 	reader := strings.NewReader(input)
