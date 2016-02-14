@@ -1,15 +1,15 @@
-package main
+package day1b
 
 import (
 	"fmt"
 	"strings"
 )
 
-// Day1b : output solution
-func Day1b() {
+// Go : main entry point
+func Go(input string) {
 	fmt.Println("day 1b")
 
-	reader := strings.NewReader(getInput(1))
+	reader := strings.NewReader(input)
 	var (
 		ch  rune
 		err error
