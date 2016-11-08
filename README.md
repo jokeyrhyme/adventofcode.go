@@ -1,6 +1,6 @@
 # adventofcode
 
-my solutions to [Advent of Code 2016](http://adventofcode.com/2016) in Go!
+my solutions to [Advent of Code 2015](http://adventofcode.com/2015) in Go!
 
 
 ## instructions
