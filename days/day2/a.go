@@ -75,8 +75,7 @@ func totalWrappingPaper(done <-chan struct{}, presents []string) <-chan int {
 	return c
 }
 
-// GoA : main entry point
-func GoA(input string) {
+func answerA(input string) int {
 	fmt.Println("day 2a")
 
 	done := make(chan struct{})
@@ -88,5 +87,5 @@ func GoA(input string) {
 		result += r
 	}
 
-	fmt.Printf("answer: %d\n", result)
+	return result
 }

@@ -1,9 +1,6 @@
 package day3
 
-import (
-	"fmt"
-	"strings"
-)
+import "strings"
 
 func answerA(input string) int {
 	reader := strings.NewReader(input)
@@ -49,10 +46,4 @@ func answerA(input string) int {
 	}
 
 	return visited
-}
-
-// GoA : main entry point
-func GoA(input string) {
-	fmt.Println("day 3a")
-	fmt.Printf("answer: %d\n", answerA(input))
 }

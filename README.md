@@ -1,8 +1,10 @@
 # adventofcode
 
-my solutions to http://adventofcode.com/ in Go!
+my solutions to [Advent of Code 2016](http://adventofcode.com/2016) in Go!
 
 
-- uses [go-bindata](https://github.com/jteeuwen/go-bindata) to bundle the data files
+## instructions
 
-    - `go-bindata data`
+```sh
+for d in ./days/*; do; go test $d -v; done
+```

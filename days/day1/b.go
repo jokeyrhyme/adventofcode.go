@@ -5,8 +5,7 @@ import (
 	"strings"
 )
 
-// GoB : main entry point
-func GoB(input string) {
+func answerB(input string) int {
 	fmt.Println("day 1b")
 
 	reader := strings.NewReader(input)
@@ -27,5 +26,5 @@ func GoB(input string) {
 		position++
 	}
 
-	fmt.Printf("answer: %d\n", position)
+	return position
 }

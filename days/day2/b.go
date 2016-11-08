@@ -54,8 +54,7 @@ func totalRibbon(done <-chan struct{}, presents []string) <-chan int {
 	return c
 }
 
-// GoB : main entry point
-func GoB(input string) {
+func answerB(input string) int {
 	fmt.Println("day 2b")
 
 	done := make(chan struct{})
@@ -67,5 +66,5 @@ func GoB(input string) {
 		result += r
 	}
 
-	fmt.Printf("answer: %d\n", result)
+	return result
 }
