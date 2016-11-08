@@ -5,7 +5,7 @@ import (
 	"testing"
 )
 
-func TestAEast(t *testing.T) {
+func TestAExample1(t *testing.T) {
 	input := ">"
 	expected := 2
 	actual := answerA(input)
@@ -14,7 +14,7 @@ func TestAEast(t *testing.T) {
 	}
 }
 
-func TestANorthEastSouthWest(t *testing.T) {
+func TestAExample2(t *testing.T) {
 	input := "^>v<"
 	expected := 4
 	actual := answerA(input)
@@ -23,7 +23,7 @@ func TestANorthEastSouthWest(t *testing.T) {
 	}
 }
 
-func TestANorthSouthNorthSouth(t *testing.T) {
+func TestAExample3(t *testing.T) {
 	input := "^v^v^v^v^v"
 	expected := 2
 	actual := answerA(input)
@@ -40,4 +40,7 @@ func TestAInput(t *testing.T) {
 	input := string(bytes[:])
 	result := answerA(input)
 	t.Logf("day 3: A: %d", result)
+	if result != 2565 {
+		t.Fail()
+	}
 }

@@ -5,11 +5,12 @@ import "strings"
 func answerA(input string) int {
 	reader := strings.NewReader(input)
 
-	houses := make(map[string]int)
+	houses := make(map[string]bool)
 	ns := 0
 	ew := 0
 
-	houses[string(ns)+","+string(ew)] = 1
+	coords := string(ns) + "," + string(ew)
+	houses[coords] = true
 
 	var (
 		ch  rune
@@ -29,21 +30,9 @@ func answerA(input string) int {
 		if string(ch) == "<" {
 			ew--
 		}
-		coords := string(ns) + "," + string(ew)
-		_, ok := houses[coords]
-		if ok {
-			houses[coords]++
-		} else {
-			houses[coords] = 1
-		}
+		coords = string(ns) + "," + string(ew)
+		houses[coords] = true
 	}
 
-	visited := 0
-	for _, visits := range houses {
-		if visits > 0 {
-			visited++
-		}
-	}
-
-	return visited
+	return len(houses)
 }
