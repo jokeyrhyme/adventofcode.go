@@ -1,6 +1,9 @@
 package day3
 
-import "strings"
+import (
+	"strconv"
+	"strings"
+)
 
 func answerA(input string) int {
 	reader := strings.NewReader(input)
@@ -9,7 +12,7 @@ func answerA(input string) int {
 	ns := 0
 	ew := 0
 
-	coords := string(ns) + "," + string(ew)
+	coords := strconv.Itoa(ns) + "," + strconv.Itoa(ew)
 	houses[coords] = true
 
 	var (
@@ -30,7 +33,7 @@ func answerA(input string) int {
 		if string(ch) == "<" {
 			ew--
 		}
-		coords = string(ns) + "," + string(ew)
+		coords = strconv.Itoa(ns) + "," + strconv.Itoa(ew)
 		houses[coords] = true
 	}
 
