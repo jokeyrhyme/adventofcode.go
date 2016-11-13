@@ -13,16 +13,17 @@ func md5Hash(input string) string {
 	return hex.EncodeToString(sum[:])
 }
 
-func testNumber(input string, number int) bool {
+func testNumber(input string, number int, hashHead string) bool {
 	hash := md5Hash(input + strconv.Itoa(number))
-	index := strings.Index(hash, "00000")
+	index := strings.Index(hash, hashHead)
 	return index == 0
 }
 
 func answerA(input string) int {
 	input = strings.TrimSpace(input)
 	number := 0
-	for !testNumber(input, number) && number < 10000000 {
+	hashHead := strings.Repeat("0", 5)
+	for !testNumber(input, number, hashHead) && number < 10000000 {
 		number++
 	}
 	return number
