@@ -13,7 +13,7 @@ func TestBInput(t *testing.T) {
 	input := string(bytes[:])
 	expected := 1038736
 	result := answerB(input)
-	t.Logf("day 4: A: %d", result)
+	t.Logf("day 4: B: %d", result)
 	if result != expected {
 		t.Fail()
 	}
